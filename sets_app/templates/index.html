@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+{% block content %}
+  <h1>Sidewake Minutes Home</h1>
+  <p>Welcome to Sidewake minutes, a website developed by <em>Bernardo Branco</em>!</p>
+  <h2>Dynamic content</h2>
+  <p>The app has the following record counts:</p>
+  <ul>
+    <li><strong>Sets:</strong> {{ num_sets }}</li>
+    <li><strong>Boats:</strong> {{ num_boats }}</li>
+    <li><strong>Total minutes:</strong> {{ num_mins }}</li>
+  </ul>
+{% endblock %}
