@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="14e33a07-731c-4e9b-86a4-2c1834496b71" name="Default Changelist" comment="" />
+    <list default="true" id="14e33a07-731c-4e9b-86a4-2c1834496b71" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sets_app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/sets_app/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sets_app/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/sets_app/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sets_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/sets_app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sets_app/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/sets_app/static/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sets_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/sets_app/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sets_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/sets_app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidewake/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/sidewake/settings.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,6 +72,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1aRjRZ1WOgG96TPgoEORjoPEHsj" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -71,6 +85,7 @@
     <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -132,6 +147,8 @@
       <workItem from="1587296335918" duration="9556000" />
       <workItem from="1587484585305" duration="1471000" />
       <workItem from="1587638470073" duration="916000" />
+      <workItem from="1587900054412" duration="685000" />
+      <workItem from="1587902038782" duration="10293000" />
     </task>
     <servers />
   </component>
@@ -215,13 +232,15 @@
       <screen x="-1217" y="-1057" width="1920" height="1057" />
     </state>
     <state x="-753" y="-906" key="SettingsEditor/0.23.1440.827/703.-1057.1920.1057/-1217.-1057.1920.1057@-1217.-1057.1920.1057" timestamp="1586705932566" />
-    <state x="397" y="268" key="com.intellij.ide.util.TipDialog" timestamp="1587484593919">
-      <screen x="0" y="23" width="1440" height="826" />
+    <state x="1232" y="-743" key="com.intellij.ide.util.TipDialog" timestamp="1587902042542">
+      <screen x="703" y="-1057" width="1920" height="1057" />
     </state>
+    <state x="1232" y="-743" key="com.intellij.ide.util.TipDialog/0.23.1440.814/703.-1057.1920.1057/-1217.-1057.1920.1057@703.-1057.1920.1057" timestamp="1587902042542" />
     <state x="397" y="268" key="com.intellij.ide.util.TipDialog/0.23.1440.826/703.-1057.1920.1057/-1217.-1057.1920.1057@0.23.1440.826" timestamp="1587484593919" />
-    <state x="727" y="23" width="713" height="810" key="dock-window-1" timestamp="1587828458773">
-      <screen x="0" y="23" width="1440" height="827" />
+    <state x="1672" y="-1057" width="951" height="1036" key="dock-window-1" timestamp="1587900061413">
+      <screen x="703" y="-1057" width="1920" height="1057" />
     </state>
+    <state x="1672" y="-1057" width="951" height="1036" key="dock-window-1/0.23.1440.814/703.-1057.1920.1057/-1217.-1057.1920.1057@703.-1057.1920.1057" timestamp="1587900061413" />
     <state x="727" y="23" width="713" height="809" key="dock-window-1/0.23.1440.826/703.-1057.1920.1057/-1217.-1057.1920.1057@0.23.1440.826" timestamp="1587635709876" />
     <state x="727" y="23" width="713" height="826" key="dock-window-1/0.23.1440.826@0.23.1440.826" timestamp="1587510011310" />
     <state x="727" y="23" width="713" height="810" key="dock-window-1/0.23.1440.827/703.-1057.1920.1057/-1217.-1057.1920.1057@0.23.1440.827" timestamp="1587828458773" />
@@ -240,10 +259,11 @@
       <screen x="703" y="-1057" width="1920" height="1057" />
     </state>
     <state x="742" y="-979" width="1651" height="659" key="dock-window-3/0.23.1440.877/703.-1057.1920.1057/-1217.-1057.1920.991@703.-1057.1920.1057" timestamp="1587032930286" />
-    <state x="1323" y="-830" width="894" height="677" key="search.everywhere.popup" timestamp="1587330981644">
+    <state x="1323" y="-830" width="894" height="677" key="search.everywhere.popup" timestamp="1587905307090">
       <screen x="703" y="-1057" width="1920" height="1057" />
     </state>
     <state x="465" y="193" width="670" height="576" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1587074019395" />
+    <state x="1323" y="-830" width="894" height="677" key="search.everywhere.popup/0.23.1440.814/703.-1057.1920.1057/-1217.-1057.1920.1057@703.-1057.1920.1057" timestamp="1587905307090" />
     <state x="-597" y="-830" width="670" height="676" key="search.everywhere.popup/0.23.1440.827/703.-1057.1920.1057/-1217.-1057.1920.1057@-1217.-1057.1920.1057" timestamp="1586709862516" />
     <state x="1323" y="-830" width="894" height="677" key="search.everywhere.popup/0.23.1440.835/703.-1057.1920.1057/-1217.-1057.1920.1057@703.-1057.1920.1057" timestamp="1587296849575" />
     <state x="1323" y="-830" width="894" height="677" key="search.everywhere.popup/0.23.1440.877/703.-1057.1920.1057/-1217.-1080.1920.1080@703.-1057.1920.1057" timestamp="1587330981644" />

@@ -9,5 +9,13 @@ class SetAdmin(admin.ModelAdmin):
     list_display = ('date_set', 'driver', 'boat', 'duration')
     list_filter = ('date_set', 'boat')
 
-admin.site.register(Boat)
-admin.site.register(Rider)
+
+#admin.site.register(Boat)
+@admin.register(Boat)
+class SetBoat(admin.ModelAdmin):
+    list_display = ('brand', 'model', 'date_added')
+
+#admin.site.register(Rider)
+@admin.register(Rider)
+class SetRider(admin.ModelAdmin):
+    list_display = ('last_name', 'first_name', 'nationality', 'date_of_birth')

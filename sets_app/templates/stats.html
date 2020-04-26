@@ -1,0 +1,7 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    {% for set in sets_query %}
+        <li> <strong>Sets:</strong> {{ set.duration__sum }} </li>
+    {% endfor %}
+{% endblock %}

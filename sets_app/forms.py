@@ -7,15 +7,24 @@ from django.utils.translation import ugettext_lazy as _
 
 from sets_app.models import Boat, Rider
 
-# TODO: use django.forms.ModelForm
+
+class DateInput(forms.DateInput):
+    input_type = 'date'
+
+
 class AddSetForm(forms.Form):
-    date_set = forms.DateField(
-        help_text="Enter the date of the set.",
-        required=True,
-        label="Date of set",
-        initial=str(datetime.date.today()),
-        widget=forms.DateInput,
-    )
+
+    date_set = forms.DateField(widget=DateInput,
+                               initial=str(datetime.date.today()),
+                               help_text="Enter date of set.")
+
+    # date_set = forms.DateField(
+    #     help_text="Enter the date of the set.",
+    #     required=True,
+    #     label="Date of set",
+    #     initial=str(datetime.date.today()),
+    #     widget=forms.DateInput,
+    # )
 
     duration = forms.FloatField(
         help_text="Enter duration of set.", required=True, label="Duration of set",
@@ -25,16 +34,10 @@ class AddSetForm(forms.Form):
         help_text="Enter name of driver.", required=True, label="Name of driver",
     )
 
+    # TODO: check if rider exists in database
     rider = forms.CharField(
         help_text="Enter name of rider.", required=True, label="Name of rider",
     )
-
-    # rider = forms.ModelChoiceField(
-    #     queryset=Rider.objects.all(),
-    #     help_text="Enter rider's name.",
-    #     required=True,
-    #     label="Rider"
-    # )
 
     boat = forms.ModelChoiceField(
         queryset=Boat.objects.all(),
@@ -61,9 +64,6 @@ class AddSetForm(forms.Form):
         data = self.cleaned_data["rider"]
 
 
-
-
-
 class AddRiderModelFrom(ModelForm):
 
     class Meta:
@@ -77,7 +77,6 @@ class AddRiderModelFrom(ModelForm):
         widgets = {
             'date_of_birth': forms.SelectDateWidget(years=DOY)
         }
-
 
 
     def clean_first_name(self):

@@ -16,13 +16,12 @@ class Rider(models.Model):
 
 
 
-
-
 class Boat(models.Model):
     """Model representing a boat"""
 
     brand = models.TextField(verbose_name="Brand of boat")
     model = models.TextField(verbose_name="Model of boat")
+    date_added = models.DateField(verbose_name="Date boat was added to fleet")
 
     def __str__(self):
         return f"{self.brand} {self.model}"

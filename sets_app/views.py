@@ -6,7 +6,7 @@ from django.urls import reverse
 from django.http import HttpResponseRedirect
 
 # models
-from django.db.models import Sum
+from django.db.models import Sum, Count
 from sets_app.models import Boat, Set
 # forms
 from sets_app.forms import AddSetForm, AddRiderModelFrom
@@ -30,6 +30,22 @@ def index(request):
     }
 
     return render(request, 'index.html', context=context)
+
+@login_required
+def stats(request):
+    """View function for stats page"""
+
+    # query for all sets per boat
+    query = list(Set.objects.values('boat_id').annotate(Sum('duration'), Count('id')))
+    # getting boat ids from queries
+    boat_ids = list(map(lambda d: d['boat_id'], query))
+    boats = [Boat.objects.get(id=id_) for id_ in boat_ids]
+
+    context = {
+        'sets_query': query
+    }
+
+    return render(request, 'stats.html', context=context)
 
 
 @login_required
