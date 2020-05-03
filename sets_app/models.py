@@ -7,9 +7,9 @@ from django.urls import reverse
 class Rider(models.Model):
     """Model representing a rider"""
     first_name = models.CharField(verbose_name="First name", max_length=100)
-    last_name = models.CharField(verbose_name="Last name", max_length=100)
-    nationality = models.CharField(verbose_name="Nationality", max_length=100)
-    date_of_birth = models.DateField(verbose_name="Birth date")
+    last_name = models.CharField(verbose_name="Last name", max_length=100, default="Linavskis")
+    nationality = models.CharField(verbose_name="Nationality", max_length=100, default="Latvia")
+    date_of_birth = models.DateField(verbose_name="Birth date", default="04/01/1989")
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
