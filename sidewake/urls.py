@@ -32,7 +32,7 @@ urlpatterns += [
 
 # redirect root URL to the URL of our sets_app
 urlpatterns += [
-    path('', RedirectView.as_view(url='sets_app/', permanent=True)),
+    path('menu/', RedirectView.as_view(url='sets_app/', permanent=True)),
 ]
 
 # Use static() to add url mapping to serve static files during development (only)
