@@ -1,0 +1,175 @@
+{% extends "base_template.html" %}
+{% load static %}
+<!--<link rel="stylesheet" type="text/css" href="{% static 'css/menu/menu.css' %}"/>-->
+{% block content %}
+<!--<body>-->
+<section id="cd-set">
+	<head>
+	<title>Contact V3</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{% static 'images/form/icons/favicon.ico' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/form/vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/form/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/form/animate/animate.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/form/vendor/css-hamburgers/hamburgers.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/form/vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/form/main.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/form/util.css' %}">
+<!--===============================================================================================-->
+	</head>
+	<header class="cd-header">
+    <div id="cd-logo"><a href="#0"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-logo_2.svg" alt="Logo"></a></div>
+    <a class="cd-menu-trigger" href="#main-nav">Menu<span></span></a>
+  	</header>
+<!--	<div class="bg-contact3" style="background-image: url('images/menu_1.JPG');">-->
+<!--	<div class="bg-contact3">-->
+	<div class="bg-contact3" style="background-image: url({% static 'images/add_set.JPG' %});">
+		<div class="container-contact3">
+			<div class="wrap-contact3">
+				<form class="contact3-form validate-form" action="{% url 'add-new-set' %}" method="post">
+					{% csrf_token %}
+					<span class="contact3-form-title">
+						Add set
+					</span>
+<!--					<p><label for="id_date_set">Date set:</label> <input type="date" name="date_set" value="2020-05-03" required id="id_date_set"> <span class="helptext">Enter date of set.</span></p>\n-->
+<!--					<p><label for="id_duration">Duration of set:</label> <input type="number" name="duration" step="any" required id="id_duration"> <span class="helptext">Enter duration of set.</span></p>\n-->
+<!--					<p><label for="id_driver">Name of driver:</label> <input type="text" name="driver" required id="id_driver"> <span class="helptext">Enter name of driver.</span></p>\n-->
+<!--					<p><label for="id_rider">Name of rider:</label> <input type="text" name="rider" required id="id_rider"> <span class="helptext">Enter name of rider.</span></p>\n-->
+<!--					<p><label for="id_boat">Boat:</label> <select name="boat" required id="id_boat">\n  <option value="" selected>-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</option>\n\n  <option value="1">Mastercraft x22</option>\n\n  <option value="2">Mastercraft xstar</option>\n\n</select> <span class="helptext">Enter boat used.</span></p>-->
+
+					<div class="wrap-input3 validate-input" data-validate="Date is required">
+						<label for="id_date_set"></label>
+						<input class="input3" type="date" name="date_set" value="2020-05-03" placeholder="Enter date of set" required id="id_date_set">
+						<span class="focus-input3"></span>
+					</div>
+
+<!--					<input type="number" name="duration" step="any" required id="id_duration"> <span class="helptext">Enter duration of set.</span></p>\n-->
+					<div class="wrap-input3 validate-input" data-validate="Duration is required">
+						<label for="id_duration"></label>
+						<input class="input3" type="number" name="duration" step="any" placeholder="Enter duration of set" required id="id_duration">
+						<span class="focus-input3"></span>
+					</div>
+
+<!--					<input type="text" name="driver" required id="id_driver"> <span class="helptext">Enter name of driver.</span></p>\n-->
+					<div class="wrap-input3 validate-input" data-validate="Nationality is required">
+						<label for="id_driver"></label>
+						<input class="input3" type="text" name="driver" placeholder="Enter driver" required id="id_driver">
+						<span class="focus-input3"></span>
+					</div>
+
+<!--					<input type="text" name="rider" required id="id_rider"> <span class="helptext">Enter name of rider.</span></p>\n-->
+					<div class="wrap-input3 validate-input" data-validate="Date of birth is required">
+						<label for="id_rider"></label>
+						<input class="input3" type="text" name="rider" placeholder="Enter rider" required id="id_rider">
+						<span class="focus-input3"></span>
+					</div>
+
+<!--					<select name="boat" required id="id_boat">\n  <option value="" selected>-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</option>\n\n  <option value="1">Mastercraft x22</option>\n\n  <option value="2">Mastercraft xstar</option>\n\n</select> <span class="helptext">Enter boat used.</span></p>-->
+					<div class="wrap-input3 validate-input" data-validate="Boat is required">
+						<label for="id_boat"></label>
+						<select name="boat" required id="id_boat">\n  <option value="" selected>---------</option>\n\n  <option value="1">Mastercraft x22</option>\n\n  <option value="2">Mastercraft xstar</option>\n\n</select>
+						<span class="focus-input3"></span>
+					</div>
+
+					<div class="wrap-contact3-form-radio" data-validate="Boat is required">
+<!--&lt;!&ndash;						<input class="input-radio3" type="text" name="rider" placeholder="Enter rider" required id="id_boat">&ndash;&gt;-->
+<!--						<label for="id_boat"></label>-->
+<!--						<div class="contact3-form-radio m-r-42">-->
+<!--							<input class="input-radio3" id="radio1" type="radio" name="choice" value="1" checked="checked" required id="id_boat">-->
+<!--							<label class="label-radio3" for="id_boat">-->
+<!--								Mastercraft x22-->
+<!--							</label>-->
+<!--						</div>-->
+
+<!--						<div class="contact3-form-radio">-->
+<!--							<input class="input-radio3" id="radio2" type="radio" name="choice" value="2" required id="id_boat">-->
+<!--							<label class="label-radio3" for="id_boat">-->
+<!--								Mastercraft xstar-->
+<!--							</label>-->
+<!--						</div>-->
+<!--					</div>-->
+
+<!--					<div class="wrap-input3 validate-input" data-validate = "Valid email is required: ex@abc.xyz">-->
+<!--						<input class="input3" type="text" name="email" placeholder="Your Email">-->
+<!--						<span class="focus-input3"></span>-->
+<!--					</div>-->
+
+<!--					<div class="wrap-input3 input3-select">-->
+<!--						<div>-->
+<!--							<select class="selection-2" name="service">-->
+<!--								<option>Needed Services</option>-->
+<!--								<option>eCommerce Bussiness</option>-->
+<!--								<option>UI/UX Design</option>-->
+<!--								<option>Online Services</option>-->
+<!--							</select>-->
+<!--						</div>-->
+<!--						<span class="focus-input3"></span>-->
+<!--					</div>-->
+
+<!--					<div class="wrap-input3 input3-select">-->
+<!--						<div>-->
+<!--							<select class="selection-2" name="budget">-->
+<!--								<option>Budget</option>-->
+<!--								<option>1500 $</option>-->
+<!--								<option>2000 $</option>-->
+<!--								<option>3000 $</option>-->
+<!--							</select>-->
+<!--						</div>-->
+<!--						<span class="focus-input3"></span>-->
+<!--					</div>-->
+
+<!--					<div class="wrap-input3 validate-input" data-validate = "Message is required">-->
+<!--						<textarea class="input3" name="message" placeholder="Your Message"></textarea>-->
+<!--						<span class="focus-input3"></span>-->
+<!--					</div>-->
+
+					<div class="container-contact3-form-btn">
+						<button class="contact3-form-btn">
+							Submit
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+	<script type="text/javascript" src="{% static 'javascript/form/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="{% static 'javascript/form/bootstrap/popper.js' %}"></script>
+	<script type="text/javascript" src="{% static 'javascript/form/bootstrap/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="{% static 'javascript/form/select2/select2.min.js' %}"></script>
+	<script>
+		$(".selection-2").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect1')
+		});
+	</script>
+<!--===============================================================================================-->
+<!--	<script src="js/main.js"></script>-->
+    <script type="text/javascript" src="{% static 'javascript/menu.js' %}"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+</section>
+{% endblock %}

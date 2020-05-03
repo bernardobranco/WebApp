@@ -1,0 +1,31 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/menu.css' %}"/>
+<script type="text/javascript" src="{% static 'javascript/menu.js' %}"></script>
+
+<body>
+<main id="cd-main-content">
+	<section id="cd-intro">
+		<h1>Sidewake Minutes</h1>
+
+		<header class="cd-header">
+			<div id="cd-logo"><a href="#0"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-logo_2.svg" alt="Logo"></a></div>
+			<a class="cd-menu-trigger" href="#main-nav">Menu<span></span></a>
+		</header>
+		<div class="cd-blurred-bg"></div>
+	</section> <!-- cd-intro -->
+</main>
+
+<div class="cd-shadow-layer"></div>
+
+<nav id="main-nav">
+	<ul>
+		<li><a href="{% url 'add-new-rider' %}"><span>Add Rider</span></a></li>
+		<li><a href="{% url 'add-new-set' %}"><span>Add Set</span></a></li>
+		<li><a href="#0"><span>Check profile</span></a></li>
+		<li><a href="#0"><span>Fun facts</span></a></li>
+		<li><a href="#0"><span>Contact us</span></a></li>
+	</ul>
+	<a href="#0" class="cd-close-menu">Close<span></span></a>
+</nav>
+</body>

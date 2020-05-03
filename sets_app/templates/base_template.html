@@ -1,0 +1,22 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/menu/menu.css' %}"/>
+<script type="text/javascript" src="{% static 'javascript/menu.js' %}"></script>
+
+<body>
+<main id="cd-main-content">{% block content %}{% endblock %}</main>
+
+
+<div class="cd-shadow-layer"></div>
+
+<nav id="main-nav">
+	<ul>
+		<li><a href="{% url 'add-new-rider' %}"><span>Add Rider</span></a></li>
+		<li><a href="{% url 'add-new-set' %}"><span>Add Set</span></a></li>
+		<li><a href="#0"><span>Check profile</span></a></li>
+		<li><a href="#0"><span>Fun facts</span></a></li>
+		<li><a href="#0"><span>Contact us</span></a></li>
+	</ul>
+	<a href="#0" class="cd-close-menu">Close<span></span></a>
+</nav>
+</body>
