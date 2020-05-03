@@ -32,6 +32,13 @@ def index(request):
     return render(request, 'index.html', context=context)
 
 @login_required
+def menu(request):
+    """View function for menu page"""
+
+    context = {}
+    return render(request, 'sets_app/menu_extended.html', context=context)
+
+@login_required
 def stats(request):
     """View function for stats page"""
 
@@ -70,7 +77,7 @@ def add_new_set(request):
             # redirect to a new URL
             # TODO: add successfully added html page
             # return HttpResponseRedirect(reverse("set-added"))
-            return HttpResponseRedirect(reverse("index"))
+            return HttpResponseRedirect(reverse("menu"))
 
     # if this is a GET request create a default form
     else:
@@ -83,7 +90,8 @@ def add_new_set(request):
         # 'set_instance': set_instance,
     }
 
-    return render(request, 'sets_app/add_new_set.html', context)
+    return render(request, 'sets_app/add_set_form.html', context)
+    # return render(request, 'sets_app/add_new_set.html', context)
 
 
 @login_required
@@ -95,10 +103,12 @@ def add_new_rider(request):
         if form.is_valid():
             form.save(commit=True)
 
-            return HttpResponseRedirect(reverse("index"))
+            return HttpResponseRedirect(reverse("menu"))
     # if get request
     else:
         # pass
         form = AddRiderModelFrom()
+        # form.as_table()
 
-    return render(request, 'sets_app/add_new_rider.html', {'form': form})
+    return render(request, 'sets_app/add_rider_form.html', {'form': form})
+    # return render(request, 'sets_app/add_new_rider.html', {'form': form})
